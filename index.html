@@ -332,12 +332,12 @@
             headers: { 'Accept': 'application/json' }
         });
 
-        // Terus redirect ke WhatsApp Admin (0125398677)
+        // Terus redirect ke WhatsApp Admin (0125398766)
         const msg = window.encodeURIComponent(`Salam, saya ${nama} (${phone}).\nSaya baru hantar order Family Day.\n\nORDER:\n${senaraiOrder}\n\n${totalVal}\n\nSila semak resit saya:`);
-        window.location.href = `https://wa.me/60125398677?text=${msg}`;
+        window.location.href = `https://wa.me/60125398766?text=${msg}`;
     } catch (err) {
         alert("Gagal hantar ke sistem, tapi anda boleh terus WhatsApp admin.");
-        window.location.href = `https://wa.me/60125398677?text=Order%20Manual%20(Gagal%20Sistem)`;
+        window.location.href = `https://wa.me/60125398766?text=Order%20Manual%20(Gagal%20Sistem)`;
     }
   };
 </script>
