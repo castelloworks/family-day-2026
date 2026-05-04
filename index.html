@@ -225,7 +225,7 @@
         </div>
 
         <div class="qr-container">
-          <!-- Merujuk terus kepada fail dalam repo anda -->
+          <!-- Menggunakan nama fail dari GitHub Repo anda -->
           <img src="qr_duitnow.jpg.jpeg" alt="DuitNow QR">
         </div>
         
@@ -318,7 +318,6 @@
     const totalVal = document.getElementById('summaryTotal').textContent;
     const senaraiOrder = members.map((m, i) => `${i+1}. ${m.nama} (${m.jenis}, ${m.saiz}, ${m.lengan})`).join('\n');
 
-    // Hantar ke Formspree (Ganti ID jika perlu)
     const formData = new FormData(this);
     formData.append('Nama_Pelanggan', nama);
     formData.append('WhatsApp', phone);
@@ -332,11 +331,11 @@
             headers: { 'Accept': 'application/json' }
         });
 
-        // Terus redirect ke WhatsApp Admin (0125398766)
+        // Redirect ke nombor yang betul: 0125398766
         const msg = window.encodeURIComponent(`Salam, saya ${nama} (${phone}).\nSaya baru hantar order Family Day.\n\nORDER:\n${senaraiOrder}\n\n${totalVal}\n\nSila semak resit saya:`);
         window.location.href = `https://wa.me/60125398766?text=${msg}`;
     } catch (err) {
-        alert("Gagal hantar ke sistem, tapi anda boleh terus WhatsApp admin.");
+        alert("Gagal hantar ke sistem, sila hantar terus ke WhatsApp admin.");
         window.location.href = `https://wa.me/60125398766?text=Order%20Manual%20(Gagal%20Sistem)`;
     }
   };
