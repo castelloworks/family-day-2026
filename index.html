@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Baju — Family Day Tuan Bakar & Maznah 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maroon: #6B0F1A;
+    --maroon-deep: #4A0810;
+    --red: #C0392B;
+    --gold: #D4A017;
+    --gold-light: #F0C040;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--maroon-deep);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(192,57,43,0.12) 60px, rgba(192,57,43,0.12) 120px),
+      linear-gradient(160deg, #7B1020 0%, #4A0810 50%, #2E050C 100%);
+    z-index: 0;
+  }
+
+  body::after {
+    content: '★ ✦ ★ ✦ ★ ✦ ★';
+    position: fixed;
+    top: 10px; left: 0; right: 0;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 18px;
+    color: rgba(212,160,23,0.25);
+    z-index: 0;
+  }
+
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 30px 16px 60px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 36px;
+    animation: fadeDown 0.7s ease both;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--maroon-deep);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(212,160,23,0.4);
+  }
+
+  header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    color: var(--gold-light);
+    letter-spacing: 2px;
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(212,160,23,0.5), 2px 3px 0 var(--maroon-deep);
+    margin-bottom: 6px;
+  }
+
+  header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    color: var(--white);
+    letter-spacing: 4px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    color: rgba(255,220,180,0.7);
+    letter-spacing: 1.5px;
+    font-style: italic;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .divider span { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .divider em { color: var(--gold); font-style: normal; font-size: 14px; }
+
+  .card {
+    background: rgba(255,248,238,0.04);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(6px);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2.5px;
+    color: var(--gold);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card-title::before {
+    content: '';
+    display: inline-block;
+    width: 3px; height: 18px;
+    background: var(--gold);
+    border-radius: 2px;
+  }
+
+  .field { margin-bottom: 18px; }
+  .field:last-child { margin-bottom: 0; }
+
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,220,180,0.8);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+
+  label .req { color: var(--gold); margin-left: 2px; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(212,160,23,0.25);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input::placeholder { color: rgba(255,255,255,0.3); }
+
+  input:focus, select:focus {
+    border-color: var(--gold);
+    background: rgba(212,160,23,0.08);
+    box-shadow: 0 0 0 3px rgba(212,160,23,0.15);
+  }
+
+  select option { background: #4A0810; color: #fff; }
+
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* MEMBER CARDS */
+  .members-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+
+  .member-card {
+    background: rgba(255,255,255,0.04);
+    border: 1.5px solid rgba(212,160,23,0.18);
+    border-radius: 12px;
+    padding: 16px 18px;
+    animation: fadeUp 0.3s ease both;
+  }
+
+  .member-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .member-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .member-num .dot {
+    width: 26px; height: 26px;
+    background: var(--gold);
+    color: var(--maroon-deep);
+    border-radius: 50%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+
+  .btn-remove {
+    background: rgba(192,57,43,0.2);
+    border: 1px solid rgba(192,57,43,0.4);
+    color: #ff8080;
+    border-radius: 7px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-remove:hover { background: rgba(192,57,43,0.5); color: #fff; }
+
+  .toggle-group { display: flex; gap: 8px; }
+
+  .toggle-btn {
+    flex: 1;
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(212,160,23,0.25);
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.55);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+
+  .toggle-btn.active {
+    background: var(--gold);
+    color: var(--maroon-deep);
+    border-color: var(--gold);
+    box-shadow: 0 3px 12px rgba(212,160,23,0.3);
+  }
+
+  .toggle-btn:hover:not(.active) { border-color: var(--gold); color: var(--gold-light); }
+
+  .btn-add-member {
+    width: 100%;
+    padding: 13px;
+    background: transparent;
+    border: 2px dashed rgba(212,160,23,0.4);
+    border-radius: 12px;
+    color: var(--gold);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-add-member:hover {
+    background: rgba(212,160,23,0.08);
+    border-color: var(--gold);
+  }
+
+  .summary-box {
+    background: rgba(212,160,23,0.08);
+    border: 1px dashed rgba(212,160,23,0.35);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 18px;
+  }
+
+  /* PRICE INFO BOX */
+  .harga-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: rgba(212,160,23,0.06);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 18px;
+  }
+
+  .harga-item {
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .harga-item .harga-label {
+    font-size: 10px;
+    color: rgba(255,200,150,0.6);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .harga-item .harga-amt {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+
+  .harga-item .harga-sub {
+    font-size: 10px;
+    color: rgba(255,200,150,0.45);
+    margin-top: 3px;
+  }
+
+  .summary-box h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 5px;
+  }
+
+  .summary-row strong { color: var(--gold-light); }
+
+  .total-row {
+    border-top: 1px solid rgba(212,160,23,0.3);
+    padding-top: 8px;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gold-light);
+  }
+
+  .total-harga-row {
+    border-top: 2px solid rgba(212,160,23,0.5);
+    padding-top: 10px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: rgba(255,230,180,0.9);
+  }
+
+  .total-harga-row .harga-besar {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: var(--gold-light);
+    text-shadow: 0 0 12px rgba(212,160,23,0.4);
+  }
+
+  .sum-member-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255,230,180,0.8);
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(212,160,23,0.1);
+  }
+
+  .sum-member-row:last-child { border-bottom: none; }
+
+  .sum-tag {
+    display: inline-block;
+    background: rgba(212,160,23,0.18);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 10px;
+    color: var(--gold-light);
+    margin-left: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .sum-tag.red {
+    background: rgba(100,10,10,0.4);
+    color: rgba(255,180,180,0.9);
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--gold) 0%, #C8860A 100%);
+    color: var(--maroon-deep);
+    border: none;
+    border-radius: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 6px 24px rgba(212,160,23,0.4);
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212,160,23,0.55);
+    background: linear-gradient(135deg, #F0C040 0%, var(--gold) 100%);
+  }
+
+  .btn-submit:active { transform: translateY(0); }
+
+  .disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,220,180,0.45);
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-overlay.show { display: flex; animation: fadeIn 0.3s ease; }
+
+  .modal {
+    background: linear-gradient(160deg, #7B1020, #4A0810);
+    border: 1px solid var(--gold);
+    border-radius: 18px;
+    padding: 36px 28px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .modal-icon { font-size: 3rem; margin-bottom: 12px; }
+
+  .modal h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--gold-light);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .modal p {
+    font-size: 13px;
+    color: rgba(255,220,180,0.8);
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .modal-btn {
+    padding: 13px 36px;
+    background: var(--gold);
+    color: var(--maroon-deep);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .modal-btn:hover { background: var(--gold-light); }
+
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); }  to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn   { from { opacity: 0; } to { opacity: 1; } }
+
+  @media (max-width: 480px) {
+    .card { padding: 18px 14px; }
+    .row-2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <header>
+    <div class="badge">★ FAMILY DAY 2026 ★</div>
+    <h1>Tuan Bakar & Maznah</h1>
+    <h2>Borang Order Baju</h2>
+    <p class="tagline">Bersatu Hati, Eratkan Silaturahmi</p>
+    <div class="divider"><span></span><em>✦</em><span></span></div>
+    <p style="font-size:11px;color:rgba(255,200,150,0.6);letter-spacing:0.5px;">Homestay Sri Makmur, Jengka &nbsp;|&nbsp; 31 Julai – 2 Ogos 2026</p>
+  </header>
+
+  <form id="orderForm" novalidate>
+
+    <!-- MAKLUMAT PENGISI -->
+    <div class="card">
+      <div class="card-title">Maklumat Pengisi Borang</div>
+
+      <div class="field">
+        <label>Nama Penuh <span class="req">*</span></label>
+        <input type="text" id="nama" placeholder="Cth: Ahmad bin Bakar" required>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label>No. IC <span class="req">*</span></label>
+          <input type="text" id="ic" placeholder="900101-01-1234" maxlength="14" required>
+        </div>
+        <div class="field">
+          <label>No. Telefon <span class="req">*</span></label>
+          <input type="tel" id="telefon" placeholder="0123456789" required>
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:0;">
+        <label>Emel <span class="req">*</span></label>
+        <input type="email" id="emel" placeholder="ahmad@gmail.com" required>
+      </div>
+    </div>
+
+    <!-- SENARAI AHLI -->
+    <div class="card">
+      <div class="card-title">Senarai Ahli Keluarga & Baju</div>
+      <p style="font-size:12px;color:rgba(255,200,150,0.55);margin-bottom:18px;line-height:1.7;">
+        Tambah setiap ahli keluarga satu per satu. Anda boleh isi terus untuk anak-anak dan ahli keluarga yang lain.
+      </p>
+
+      <!-- HARGA RUJUKAN -->
+      <div class="harga-box">
+        <div class="harga-item">
+          <div class="harga-label">👕 Lengan Pendek</div>
+          <div class="harga-amt">RM25</div>
+          <div class="harga-sub">Dewasa (XS–XL)</div>
+        </div>
+        <div class="harga-item">
+          <div class="harga-label">🧥 Lengan Panjang</div>
+          <div class="harga-amt">RM30</div>
+          <div class="harga-sub">Dewasa (XS–XL)</div>
+        </div>
+        <div class="harga-item">
+          <div class="harga-label">🧒 Kanak-kanak</div>
+          <div class="harga-amt">RM20</div>
+          <div class="harga-sub">Semua saiz</div>
+        </div>
+      </div>
+
+      <div class="members-list" id="membersList"></div>
+
+      <button type="button" class="btn-add-member" onclick="tambahAhli()">
+        ＋ Tambah Ahli Keluarga
+      </button>
+
+      <div class="summary-box">
+        <h4>Ringkasan Order</h4>
+        <div id="memberSummaryList">
+          <p style="font-size:12px;color:rgba(255,200,150,0.4);font-style:italic;">Belum ada ahli ditambah.</p>
+        </div>
+        <div class="total-row summary-row" style="margin-top:10px;">
+          <span>Jumlah Baju</span>
+          <strong id="sumTotal">0 helai</strong>
+        </div>
+        <div class="total-harga-row">
+          <span>JUMLAH BAYARAN</span>
+          <span class="harga-besar" id="sumHarga">RM 0.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div style="margin-bottom:0;">
+      <button type="submit" class="btn-submit">✦ HANTAR ORDER ✦</button>
+      <p class="disclaimer">
+        Dengan menghantar borang ini, anda bersetuju maklumat anda akan digunakan untuk tujuan order baju Family Day 2026 sahaja.<br>
+        Pengesahan akan dihantar ke emel anda.
+      </p>
+    </div>
+
+  </form>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-icon">🎉</div>
+    <h3>Order Berjaya!</h3>
+    <p id="modalMsg">Terima kasih! Order baju anda telah direkodkan.</p>
+    <button class="modal-btn" onclick="tutupModal()">TUTUP</button>
+  </div>
+</div>
+
+<script>
+  const SAIZ_DEWASA = ['2XS','XS','S','M','L','XL','2XL','3XL','4XL','5XL'];
+  const SAIZ_KANAK  = ['2XS','XS','S','M','L','XL'];
+
+  // Harga logic
+  function getHarga(m) {
+    if (m.jenis === 'Kanak-kanak') return 20;
+    // Dewasa: pendek RM25, panjang RM30
+    return m.lengan === 'Pendek' ? 25 : 30;
+  }
+
+  let members = [];
+  let idCounter = 0;
+
+  window.addEventListener('DOMContentLoaded', () => tambahAhli());
+
+  function tambahAhli() {
+    const id = ++idCounter;
+    members.push({ id, nama: '', jenis: 'Dewasa', lengan: 'Panjang', saiz: '' });
+    renderMembers();
+    setTimeout(() => {
+      const el = document.getElementById('member-' + id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 120);
+  }
+
+  function buangAhli(id) {
+    members = members.filter(m => m.id !== id);
+    renderMembers();
+  }
+
+  function updateField(id, field, value) {
+    const m = members.find(m => m.id === id);
+    if (!m) return;
+    m[field] = value;
+    if (field === 'jenis') {
+      m.saiz = '';
+      const sel = document.getElementById('saiz-' + id);
+      if (sel) isiSaiz(sel, value);
+    }
+    kiraTotal();
+  }
+
+  function setLengan(id, jenis) {
+    const m = members.find(m => m.id === id);
+    if (!m) return;
+    m.lengan = jenis;
+    document.getElementById('btn-p-' + id).classList.toggle('active', jenis === 'Panjang');
+    document.getElementById('btn-k-' + id).classList.toggle('active', jenis === 'Pendek');
+    kiraTotal();
+  }
+
+  function isiSaiz(el, jenis) {
+    const senarai = jenis === 'Kanak-kanak' ? SAIZ_KANAK : SAIZ_DEWASA;
+    el.innerHTML = '<option value="">— Pilih Saiz —</option>' +
+      senarai.map(s => `<option value="${s}">${s}</option>`).join('');
+  }
+
+  function renderMembers() {
+    const list = document.getElementById('membersList');
+    list.innerHTML = '';
+
+    members.forEach((m, idx) => {
+      const div = document.createElement('div');
+      div.className = 'member-card';
+      div.id = 'member-' + m.id;
+
+      const senarai = m.jenis === 'Kanak-kanak' ? SAIZ_KANAK : SAIZ_DEWASA;
+      const saizOpts = senarai.map(s =>
+        `<option value="${s}" ${m.saiz === s ? 'selected' : ''}>${s}</option>`
+      ).join('');
+
+      div.innerHTML = `
+        <div class="member-header">
+          <div class="member-num">
+            <div class="dot">${idx + 1}</div>
+            AHLI KE-${idx + 1}
+          </div>
+          ${members.length > 1
+            ? `<button type="button" class="btn-remove" onclick="buangAhli(${m.id})">✕ Buang</button>`
+            : ''}
+        </div>
+
+        <div class="row-2" style="margin-bottom:14px;">
+          <div class="field" style="margin-bottom:0;">
+            <label>Nama pada Baju <span class="req">*</span></label>
+            <input type="text"
+              id="nama-${m.id}"
+              placeholder="Cth: ALONG / SARAH / AQIL"
+              maxlength="20"
+              value="${m.nama}"
+              oninput="updateField(${m.id},'nama',this.value.toUpperCase());this.value=this.value.toUpperCase();"
+            >
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <label>Jenis Ahli <span class="req">*</span></label>
+            <select id="jenis-${m.id}" onchange="updateField(${m.id},'jenis',this.value)">
+              <option value="Dewasa" ${m.jenis==='Dewasa'?'selected':''}>Dewasa</option>
+              <option value="Kanak-kanak" ${m.jenis==='Kanak-kanak'?'selected':''}>Kanak-kanak</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row-2">
+          <div class="field" style="margin-bottom:0;">
+            <label>Saiz Baju <span class="req">*</span></label>
+            <select id="saiz-${m.id}" onchange="updateField(${m.id},'saiz',this.value)">
+              <option value="">— Pilih Saiz —</option>
+              ${saizOpts}
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <label>Jenis Lengan <span class="req">*</span></label>
+            <div class="toggle-group">
+              <button type="button"
+                class="toggle-btn ${m.lengan==='Panjang'?'active':''}"
+                id="btn-p-${m.id}"
+                onclick="setLengan(${m.id},'Panjang')">🧥 Panjang</button>
+              <button type="button"
+                class="toggle-btn ${m.lengan==='Pendek'?'active':''}"
+                id="btn-k-${m.id}"
+                onclick="setLengan(${m.id},'Pendek')">👕 Pendek</button>
+            </div>
+          </div>
+        </div>
+      `;
+
+      list.appendChild(div);
+    });
+
+    kiraTotal();
+  }
+
+  function kiraTotal() {
+    const summaryDiv = document.getElementById('memberSummaryList');
+
+    if (members.length === 0) {
+      summaryDiv.innerHTML = '<p style="font-size:12px;color:rgba(255,200,150,0.4);font-style:italic;">Belum ada ahli ditambah.</p>';
+      document.getElementById('sumTotal').textContent = '0 helai';
+      document.getElementById('sumHarga').textContent = 'RM 0.00';
+      return;
+    }
+
+    let html = '';
+    let grandTotal = 0;
+
+    members.forEach((m, idx) => {
+      const nama  = m.nama || 'Ahli ' + (idx + 1);
+      const saiz  = m.saiz || '—';
+      const harga = getHarga(m);
+      grandTotal += harga;
+
+      html += `
+        <div class="sum-member-row">
+          <span>${idx + 1}. <strong style="color:var(--gold-light)">${nama}</strong>
+            <span class="sum-tag">${m.lengan}</span>
+            <span class="sum-tag red">${m.jenis === 'Kanak-kanak' ? 'Kanak' : 'Dewasa'}</span>
+          </span>
+          <span style="white-space:nowrap;">
+            Saiz <strong style="color:#fff">${saiz}</strong>
+            &nbsp;<strong style="color:var(--gold-light)">RM${harga}</strong>
+          </span>
+        </div>`;
+    });
+
+    summaryDiv.innerHTML = html;
+    document.getElementById('sumTotal').textContent = members.length + ' helai';
+    document.getElementById('sumHarga').textContent = 'RM ' + grandTotal.toFixed(2);
+  }
+
+  // IC auto-dash
+  document.getElementById('ic').addEventListener('input', function(e) {
+    let v = e.target.value.replace(/\D/g,'');
+    if (v.length > 6) v = v.slice(0,6) + '-' + v.slice(6);
+    if (v.length > 9) v = v.slice(0,9) + '-' + v.slice(9);
+    e.target.value = v.slice(0,14);
+  });
+
+  // Validation
+  function validate() {
+    const req = [
+      { id: 'nama', label: 'Nama Penuh' },
+      { id: 'ic', label: 'No. IC' },
+      { id: 'telefon', label: 'No. Telefon' },
+      { id: 'emel', label: 'Emel' },
+    ];
+
+    for (const f of req) {
+      const el = document.getElementById(f.id);
+      if (!el.value.trim()) {
+        el.focus(); el.style.borderColor = '#C0392B';
+        setTimeout(() => el.style.borderColor = '', 2000);
+        alert('Sila isi: ' + f.label);
+        return false;
+      }
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('emel').value)) {
+      alert('Format emel tidak sah. Sila semak semula.');
+      return false;
+    }
+
+    if (members.length === 0) {
+      alert('Sila tambah sekurang-kurangnya 1 ahli keluarga.');
+      return false;
+    }
+
+    for (let i = 0; i < members.length; i++) {
+      const m = members[i];
+      if (!m.nama.trim()) {
+        const el = document.getElementById('nama-' + m.id);
+        if (el) el.focus();
+        alert('Sila isi nama pada baju untuk Ahli ke-' + (i + 1) + '.');
+        return false;
+      }
+      if (!m.saiz) {
+        const el = document.getElementById('saiz-' + m.id);
+        if (el) el.focus();
+        alert('Sila pilih saiz baju untuk ' + (m.nama || 'Ahli ke-' + (i+1)) + '.');
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  // Build email
+  function buildEmail() {
+    const nama = document.getElementById('nama').value;
+    const ic   = document.getElementById('ic').value;
+    const tel  = document.getElementById('telefon').value;
+    const emel = document.getElementById('emel').value;
+
+    let grandTotal = 0;
+    const rows = members.map((m, i) => {
+      const harga = getHarga(m);
+      grandTotal += harga;
+      return `  ${String(i+1).padStart(2,'0')}. ${(m.nama||'-').padEnd(20)} | ${m.jenis.padEnd(12)} | Saiz: ${m.saiz.padEnd(5)} | Lengan: ${m.lengan.padEnd(7)} | RM${harga}.00`;
+    }).join('\n');
+
+    return `BORANG ORDER BAJU — FAMILY DAY 2026
+Keluarga Tuan Bakar & Maznah
+Homestay Sri Makmur, Jengka | 31 Julai – 2 Ogos 2026
+============================================================
+
+MAKLUMAT PENGISI BORANG
+Nama Penuh  : ${nama}
+No. IC      : ${ic}
+No. Telefon : ${tel}
+Emel        : ${emel}
+
+SENARAI AHLI KELUARGA & BAJU
+${rows}
+
+------------------------------------------------------------
+JUMLAH BAJU    : ${members.length} helai
+JUMLAH BAYARAN : RM ${grandTotal.toFixed(2)}
+============================================================
+Dihantar melalui Borang Order Online Family Day 2026`;
+  }
+
+  // Submit
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const nama    = document.getElementById('nama').value;
+    const subject = encodeURIComponent('Order Baju Family Day 2026 — ' + nama);
+    const body    = encodeURIComponent(buildEmail());
+
+    window.open('mailto:?subject=' + subject + '&body=' + body, '_blank');
+
+    document.getElementById('modalMsg').textContent =
+      'Terima kasih, ' + nama.split(' ')[0] + '! Aplikasi emel anda telah dibuka dengan semua maklumat order untuk ' + members.length + ' ahli keluarga. Sila hantar emel kepada pihak penganjur untuk pengesahan.';
+    document.getElementById('modal').classList.add('show');
+  });
+
+  function tutupModal() {
+    document.getElementById('modal').classList.remove('show');
+  }
+</script>
+</body>
+</html>
